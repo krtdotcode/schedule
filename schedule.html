@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1CS-A | Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Poppins", sans-serif;
+            height: fit-content;
+            background-image: url('https://pinnacle.pnc.edu.ph/img/pnc-bg-1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .main-ctn {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 40px 0;
+        }
+        .txt-ctn {
+            font-size: 3rem;
+            text-align: center;
+            width: 450px;
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5);
+        }
+        .timer-ctn {
+            text-align: center;
+            width: 450px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5);
+        }
+        #clock {
+            font-size: 1.5rem;
+        }
+        #date {
+            font-size: 1rem;
+        }
+        table {
+            width: 90%;
+            margin: auto;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        th, td {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        td {
+            color: white;
+        }
+
+        @media screen and (max-width: 1000px) {
+            html {
+                font-size: 12px;
+            }
+            .txt-ctn, .timer-ctn {
+                width: 320px;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            html {
+                font-size: 10px;
+            }
+            .txt-ctn, .timer-ctn {
+                width: 280px;
+            }
+        }
+        @media screen and (max-width: 670px) {
+            html {
+                font-size: 8px;
+            }
+            .main-ctn {
+                margin: 30px 0;
+            }
+            .txt-ctn, .timer-ctn {
+                width: 240px;
+                border-radius: 8px;
+            }
+        }
+        @media screen and (max-width: 570px) {
+            html {
+                font-size: 6px;
+            }
+            .main-ctn {
+                margin: 20px 0;
+            }
+            .txt-ctn, .timer-ctn {
+                width: 200px;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-ctn">
+        <div class="txt-ctn">
+            1CS-A | Schedule
+        </div>
+        <div class="timer-ctn">
+            <h2>Time Check:</h2>
+            <div id="clock"></div>
+            <div id="date"></div>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>7:00 - 7:30</td>
+                <td rowspan="6" style="background-color: rgba(255, 166, 0, 0.8);">CCS103 - Computer Programming 2</td>
+                <td rowspan="3" style="background-color: rgba(0, 128, 0, 0.3);">HIS101 - Readings in Philippine History</td>
+                <td rowspan="4" style="background-color: rgba(255, 166, 0, 0.8);">CCS103 - Computer Programming 2</td>
+                <td></td>
+                <td rowspan="3" style="background-color: rgba(0, 128, 0, 0.3);">HIS101 - Readings in Philippine History</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7:30 - 8:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8:00 - 8:30</td>
+                <td></td>
+                <td rowspan="8" style="background-color: rgba(0, 128, 0, 0.3);">NSTP 2 - ROTC</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8:30 - 9:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9:00 - 9:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9:30 - 10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:00 - 10:30</td>
+                <td rowspan="3" style="background-color: rgba(0, 128, 0, 0.3);">HMN101 - Art Appreciation</td>
+                <td></td>
+                <td></td>
+                <td rowspan="3" style="background-color: rgba(0, 128, 0, 0.3);">HMN101 - Art Appreciation</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:30 - 11:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11:00 - 11:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11:30 - 12:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12:00 - 12:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12:30 - 1:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1:00 - 1:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1:30 - 2:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td rowspan="7" style="background-color: rgba(255, 166, 0, 0.8);">CCS114 - Web Technologies</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2:00 - 2:30</td>
+                <td rowspan="4" style="background-color: rgba(255, 166, 0, 0.8);">CCS105 - Human Computer Interaction</td>
+                <td rowspan="6" style="background-color: rgba(255, 166, 0, 0.8);">CCS105 - Human Computer Interaction</td>
+                <td rowspan="4" style="background-color: rgba(0, 128, 0, 0.3);">PED102 - Physical Education 2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2:30 - 3:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3:00 - 3:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>            
+            <tr>
+                <td>3:30 - 4:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4:00 - 4:30</td>
+                <td rowspan="3" style="background-color: rgba(0, 128, 0, 0.3);">COM101 - Purposive Communication</td>
+                <td></td>
+                <td rowspan="3" style="background-color: rgba(0, 128, 0, 0.3);">COM101 - Purposive Communication</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4:30 - 5:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5:00 - 5:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        alert('Not yet responsive pa po sa smaller screens, kaya mas ok po ang view pag sa pc heheh, thanks');
+
+        function updateClock() {
+            let now = new Date();
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let ampm = hours >= 12 ? 'PM' : 'AM';
+
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            let timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+            document.getElementById('clock').innerText = timeString;
+
+            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            let day = days[now.getDay()];
+            let month = months[now.getMonth()];
+            let date = now.getDate();
+            let year = now.getFullYear();
+
+            let dateString = day + ', ' + month + ' ' + date + ', ' + year;
+            document.getElementById('date').innerText = dateString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
